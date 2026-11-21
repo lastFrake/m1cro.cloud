@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contact · m1cro.cloud</title>
+    <meta name="description" content="How to ask about m1cro.cloud and report a vulnerability." />
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <header>
+      <a class="brand" href="/">m1cro.cloud</a>
+      <nav>
+        <a href="/artifacts/">Artifacts</a>
+        <a href="/license/">License</a>
+        <a href="/contact/">Contact</a>
+      </nav>
+    </header>
+    <main>
+<h1>Contact</h1>
+<p>Questions and feedback: <a href="https://github.com/lastFrake/m1cro.cloud/issues">GitHub Issues</a>.</p>
+<p>Vulnerabilities: <a href="https://github.com/lastFrake/m1cro.cloud/security/advisories/new">report privately on GitHub</a>, and keep them private until fixed.</p>
+
+    </main>
+    <script>
+      // A copy button on each command.
+      for (const pre of document.querySelectorAll('pre.cmd')) {
+        const button = document.createElement('button')
+        button.type = 'button'
+        button.className = 'copy'
+        button.textContent = 'Copy'
+        button.addEventListener('click', async () => {
+          await navigator.clipboard.writeText(pre.querySelector('code').textContent)
+          button.textContent = 'Copied'
+          setTimeout(() => (button.textContent = 'Copy'), 1500)
+        })
+        pre.append(button)
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Not found · m1cro.cloud</title>
+    <meta name="description" content="This page does not exist." />
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <header>
+      <a class="brand" href="/">m1cro.cloud</a>
+      <nav>
+        <a href="/artifacts/">Artifacts</a>
+        <a href="/license/">License</a>
+        <a href="/contact/">Contact</a>
+      </nav>
+    </header>
+    <main>
+<h1>Not found</h1>
+<p>There is no such page. Start from the <a href="/">home page</a>.</p>
+
+    </main>
+    <script>
+      // A copy button on each command.
+      for (const pre of document.querySelectorAll('pre.cmd')) {
+        const button = document.createElement('button')
+        button.type = 'button'
+        button.className = 'copy'
+        button.textContent = 'Copy'
+        button.addEventListener('click', async () => {
+          await navigator.clipboard.writeText(pre.querySelector('code').textContent)
+          button.textContent = 'Copied'
+          setTimeout(() => (button.textContent = 'Copy'), 1500)
+        })
+        pre.append(button)
+      }
+    </script>
+  </body>
+</html>

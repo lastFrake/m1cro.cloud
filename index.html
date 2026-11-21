@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>m1cro.cloud</title>
+    <meta name="description" content="A self-hosted cloud on your own machines over Tailscale or Headscale." />
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <header>
+      <a class="brand" href="/">m1cro.cloud</a>
+      <nav>
+        <a href="/artifacts/">Artifacts</a>
+        <a href="/license/">License</a>
+        <a href="/contact/">Contact</a>
+      </nav>
+    </header>
+    <main>
+<h1>m1cro.cloud</h1>
+<p class="lead">A self-hosted cloud on your own machines over Tailscale or Headscale.</p>
+
+<h2>Install</h2>
+<p><code>m1</code> is the CLI that creates, configures and runs a cloud in Docker.</p>
+<pre class="cmd"><code>curl -fsSL https://m1cro.cloud/install.sh | sh</code></pre>
+<pre class="cmd"><code>irm https://m1cro.cloud/install.ps1 | iex</code></pre>
+<pre><code>m1 create     # a new cloud
+m1 reconfig   # change its network, bucket or providers
+m1 restore    # a cloud from its snapshot
+m1 --help</code></pre>
+
+    </main>
+    <script>
+      // A copy button on each command.
+      for (const pre of document.querySelectorAll('pre.cmd')) {
+        const button = document.createElement('button')
+        button.type = 'button'
+        button.className = 'copy'
+        button.textContent = 'Copy'
+        button.addEventListener('click', async () => {
+          await navigator.clipboard.writeText(pre.querySelector('code').textContent)
+          button.textContent = 'Copied'
+          setTimeout(() => (button.textContent = 'Copy'), 1500)
+        })
+        pre.append(button)
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,123 @@
+:root {
+  --bg: #fbfbfa;
+  --fg: #1d1d1b;
+  --muted: #5f5f5a;
+  --line: #e2e2dd;
+  --code-bg: #f1f1ee;
+  --accent: #2557c9;
+  color-scheme: light dark;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #161615;
+    --fg: #e9e9e4;
+    --muted: #a3a39c;
+    --line: #2e2e2b;
+    --code-bg: #20201e;
+    --accent: #7ea2ff;
+  }
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font: 16px/1.6 system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+}
+header,
+main {
+  max-width: 46rem;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+header {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.25rem;
+  align-items: baseline;
+  justify-content: space-between;
+  padding-top: 1.25rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--line);
+}
+nav {
+  display: flex;
+  gap: 1.25rem;
+}
+.brand {
+  font-weight: 700;
+  color: var(--fg);
+  text-decoration: none;
+}
+main {
+  padding-bottom: 3rem;
+}
+a {
+  color: var(--accent);
+}
+h1 {
+  font-size: 2rem;
+  line-height: 1.2;
+  margin: 1.5rem 0 1rem;
+}
+h2 {
+  font-size: 1.3rem;
+  margin: 2.25rem 0 0.5rem;
+}
+.lead {
+  font-size: 1.15rem;
+}
+.muted {
+  color: var(--muted);
+}
+code {
+  font: 0.9em ui-monospace, 'Cascadia Code', Menlo, Consolas, monospace;
+  background: var(--code-bg);
+  padding: 0.1em 0.3em;
+  border-radius: 4px;
+}
+pre {
+  position: relative;
+  background: var(--code-bg);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 0.8rem 1rem;
+  overflow-x: auto;
+}
+pre code {
+  background: none;
+  padding: 0;
+}
+pre.cmd {
+  padding-right: 4.5rem;
+}
+.copy {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  font: inherit;
+  font-size: 0.8rem;
+  padding: 0.15rem 0.6rem;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  background: var(--bg);
+  color: var(--fg);
+  cursor: pointer;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+th,
+td {
+  text-align: left;
+  vertical-align: top;
+  padding: 0.4rem 0.5rem 0.4rem 0;
+  border-bottom: 1px solid var(--line);
+}
+td code {
+  white-space: nowrap;
+}
