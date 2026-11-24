@@ -1,5 +1,5 @@
 Contact: https://github.com/lastFrake/m1cro.cloud/security/advisories/new
-Expires: 2027-05-23T10:22:21Z
+Expires: 2027-05-25T20:47:21Z
 Preferred-Languages: en, ru
 Canonical: https://m1cro.cloud/.well-known/security.txt
 Policy: https://m1cro.cloud/contact/
